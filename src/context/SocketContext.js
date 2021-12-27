@@ -24,12 +24,13 @@ const ContextProvider = ({children}) => {
             socket.on('me', (id) => setMe(id));
 
             socket.on('calluser', ({ from, name: callerName, signal  }) => {    
+                setCall({ isReceivedCall: true , from, name: callerName, signal});
 
             });
     }, []);
 
     const answerCall = () => {
-
+        setCall({ isReceivedCall})
     }
 
     const callUser = () => {
