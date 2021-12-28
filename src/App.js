@@ -8,7 +8,7 @@ import Notifications  from './components/Notifications';
 const useStyles = makeStyles((theme) => ({
   appBar: {
     borderRadius: 10,
-    margin: '30px 100px',
+    margin: '20px 100px',
     display: 'flex',
     padding:'10px',
     flexDirection: 'row',
@@ -39,7 +39,7 @@ function App() {
   return (
     <div className={classes.wrapper}>
         <AppBar className={classes.appBar} position="static" color="inherit">
-          <Typography variant="h3" align="center">Video Chat App</Typography>
+          <Typography variant="h5" align="center">Video Chat App Alevante</Typography>
         </AppBar>
         <VideoPlayer/>
         <Options>
