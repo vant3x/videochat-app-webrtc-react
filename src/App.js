@@ -45,7 +45,6 @@ function App() {
         <Options>
           <Notifications/>
         </Options>
-        {/* options =>  notifications */}
     </div>
   );
 }
