@@ -12,6 +12,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Assignment, Phone, PhoneDisabled } from "@material-ui/icons";
 
 import { SocketContext } from "../context/SocketContext";
+import { useEffect } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,6 +52,12 @@ const Options = ({ children }) => {
   const { me, callAccepted, name, setName, callEnded, leaveCall, callUser } = useContext(SocketContext);
   const [idToCall, setIdToCall] = useState('');
   const classes = useStyles();
+
+  useEffect(() => {
+    if (callEnded) {
+      window.location.reload();
+    }
+  }, [callEnded]);
 
   return (
     <Container className={classes.container}>
